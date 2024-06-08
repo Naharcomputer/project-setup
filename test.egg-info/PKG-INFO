@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: test
+Version: 0.0.1
+Author: mintu
+Author-email: mintu.130241@gmail.com
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: scikit-learn
