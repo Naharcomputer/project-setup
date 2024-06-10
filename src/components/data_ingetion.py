@@ -1,6 +1,6 @@
 import os
 import sys
-from src.exception import CustomException
+from src.exception import CustomeException
 from src.logger import logging
 import pandas as pd
 
@@ -23,7 +23,7 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         logging.info("Entered the data ingestion method or component")
         try:
-            df=pd.read_csv(r'D:\\Mintu\\Python Project\\Data Analysis\\VS\projectSetup\\project-setup\\notebook\\data\\stud.csv')
+            df=pd.read_csv('../notebook/data/stud.csv')
             logging.info('Read the dataset as dataframe')
 
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
@@ -45,7 +45,7 @@ class DataIngestion:
 
             )
         except Exception as e:
-            raise CustomException(e,sys)
+            raise CustomeException(e,sys)
         
 if __name__=="__main__":
     obj=DataIngestion()
